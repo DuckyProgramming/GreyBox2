@@ -19,9 +19,9 @@ function setupGraphics(){
     graphics.minor[0].strokeWeight(0.6)
     graphics.minor[0].strokeJoin(ROUND)
     for(let a=0,la=100;a<la;a++){
+        graphics.minor[0].fill(241+9*a/la,170+52*a/la,189+37*a/la)
+        graphics.minor[0].stroke(241+9*a/la,170+52*a/la,189+37*a/la)
         for(let b=0;b<5;b++){
-            graphics.minor[0].fill(241+9*a/la,170+52*a/la,189+37*a/la)
-            graphics.minor[0].stroke(241+9*a/la,170+52*a/la,189+37*a/la)
             if(a<la/2){
                 graphics.minor[0].beginShape()
                 graphics.minor[0].vertex(0,0)
@@ -42,11 +42,9 @@ function setupGraphics(){
             graphics.minor[0].endShape(CLOSE)
         }
     }
+    graphics.minor[0].fill(240,207,211)
     for(let a=0;a<5;a++){
-        graphics.minor[0].rotate(72)
-        graphics.minor[0].rotate(-12)
-        graphics.minor[0].noStroke()
-        graphics.minor[0].fill(240,207,211)
+        graphics.minor[0].rotate(60)
         graphics.minor[0].quad(0,-4,4,-16,0,-24,-4,-16)
         graphics.minor[0].rotate(12)
     }
@@ -56,9 +54,9 @@ function setupGraphics(){
     graphics.minor[1].strokeWeight(0.6)
     graphics.minor[1].strokeJoin(ROUND)
     for(let a=0,la=100;a<la;a++){
+        graphics.minor[1].fill(136+59*a/la,61+7*a/la,92-5*a/la)
+        graphics.minor[1].stroke(136+59*a/la,61+7*a/la,92-5*a/la)
         for(let b=0;b<5;b++){
-            graphics.minor[1].fill(136+59*a/la,61+7*a/la,92-5*a/la)
-            graphics.minor[1].stroke(136+59*a/la,61+7*a/la,92-5*a/la)
             if(a<la/2){
                 graphics.minor[1].beginShape()
                 graphics.minor[1].vertex(0,0)
@@ -79,11 +77,9 @@ function setupGraphics(){
             graphics.minor[1].endShape(CLOSE)
         }
     }
+    graphics.minor[1].fill(124,41,51)
     for(let a=0;a<5;a++){
-        graphics.minor[1].rotate(72)
-        graphics.minor[1].rotate(-12)
-        graphics.minor[1].noStroke()
-        graphics.minor[1].fill(124,41,51)
+        graphics.minor[1].rotate(60)
         graphics.minor[1].quad(0,-4,3,-16,0,-24,-3,-16)
         graphics.minor[1].rotate(12)
     }
