@@ -55,8 +55,8 @@ function setupGraphics(){
     graphics.minor[1].translate(80,80)
     graphics.minor[1].strokeWeight(0.6)
     graphics.minor[1].strokeJoin(ROUND)
-    for(a=0,la=100;a<la;a++){
-        for(b=0;b<5;b++){
+    for(let a=0,la=100;a<la;a++){
+        for(let b=0;b<5;b++){
             graphics.minor[1].fill(136+59*a/la,61+7*a/la,92-5*a/la)
             graphics.minor[1].stroke(136+59*a/la,61+7*a/la,92-5*a/la)
             if(a<la/2){
@@ -79,7 +79,7 @@ function setupGraphics(){
             graphics.minor[1].endShape(CLOSE)
         }
     }
-    for(a=0;a<5;a++){
+    for(let a=0;a<5;a++){
         graphics.minor[1].rotate(72)
         graphics.minor[1].rotate(-12)
         graphics.minor[1].noStroke()
