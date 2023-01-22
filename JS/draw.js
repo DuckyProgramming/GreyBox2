@@ -12,7 +12,7 @@ function draw(){
 					run.back[a][b].update()
 				}
 			}
-			graphics.main.translate(-stage.focus.x,-stage.focus.y)
+			graphics.main.translate(round(-stage.focus.x),round(-stage.focus.y))
 			graphics.main.scale(stage.focus.size*stage.quality)
 			graphics.main.translate(graphics.main.width/2,graphics.main.height/2)
 			for(let a=0,la=run.fore.length;a<la;a++){

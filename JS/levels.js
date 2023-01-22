@@ -1,9 +1,25 @@
 levels=[
 	{
-		edge:{x:1200,y:450},
-		player:{x:75,y:240},
+		edge:{x:750,y:450},
+		player:[240,240],
 		walls:[
-			{position:{x:0,y:390},type:1,width:150,height:60},
+			{position:{x:0,y:360},type:1,width:150,height:90},
+			{position:{x:150,y:330},type:1,width:150,height:120},
+			{position:{x:300,y:360},type:1,width:150,height:90},
+			{position:{x:450,y:390},type:1,width:150,height:60},
+			{position:{x:600,y:360},type:1,width:150,height:90},
+		],
+	},{
+		edge:{x:900,y:450},
+		player:[240,240],
+		walls:[
+			{position:{x:0,y:360},type:1,width:120,height:90},
+			{position:{x:150,y:300},type:1,width:120,height:150},
+			{position:{x:330,y:330},type:1,width:120,height:120},
+			{position:{x:480,y:210},type:1,width:90,height:240},
+			{position:{x:570,y:150},type:1,width:90,height:300},
+			{position:{x:660,y:210},type:1,width:90,height:240},
+			{position:{x:750,y:270},type:1,width:150,height:180},
 		],
 	},
 ]
