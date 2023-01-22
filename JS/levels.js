@@ -54,6 +54,17 @@ levels=[
 			{position:{x:600,y:360},type:1,width:60,height:30},
 			{position:{x:600,y:480},type:1,width:90,height:30},
 		],
+	},{
+		edge:{x:1200,y:600},
+		player:[480,0],
+		walls:[
+			{position:{x:0,y:510},type:1,width:150,height:90},
+			{position:{x:360,y:420},type:1,width:60,height:60},
+			{position:{x:480,y:330},type:1,width:60,height:60},
+			{position:{x:720,y:450},type:1,width:60,height:60},
+			{position:{x:900,y:390},type:1,width:60,height:60},
+			{position:{x:1050,y:510},type:1,width:150,height:90},
+		],
 	},
 	/*{
 		edge:{x:0,y:600},
