@@ -12,8 +12,13 @@ class player extends partisan{
     display(){
         if(this.fade>0&&this.size>0){
             this.layer.translate(this.position.x+this.offset.position.x,this.position.y+this.offset.position.y)
+            this.layer.noStroke()
             this.layer.fill(175,this.fade)
             this.layer.rect(0,0,this.width,this.height)
+            this.layer.fill(50,this.fade)
+            for(let a=0;a<this.jumps;a++){
+                this.layer.ellipse(this.width*0.75,-this.height*0.5-a*6,4,4)
+            }
             this.layer.translate(-this.position.x-this.offset.position.x,-this.position.y-this.offset.position.y)
         }
     }
