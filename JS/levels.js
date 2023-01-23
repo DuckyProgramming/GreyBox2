@@ -104,11 +104,24 @@ levels=[
 		],
 	},{
 		edge:{x:900,y:600},
-		player:[510,0],
+		player:[510,480],
 		walls:[
 			{position:{x:0,y:540},type:1,width:120,height:60},
-			{position:{x:600,y:480},type:3,width:30,height:30},
+			{position:{x:605,y:485},type:3,width:20,height:20},
 			{position:{x:780,y:510},type:1,width:120,height:90},
+		],
+	},{
+		edge:{x:600,y:1200},
+		player:[1110,210],
+		walls:[
+			{position:{x:0,y:1140},type:1,width:90,height:60},
+			{position:{x:510,y:240},type:1,width:90,height:120},
+			{position:{x:570,y:360},type:1,width:30,height:840},
+			{position:{x:540,y:870},type:1,width:30,height:30},
+			{position:{x:540,y:690},type:1,width:30,height:30},
+			{position:{x:425,y:935},type:3,width:20,height:20},
+			{position:{x:365,y:395},type:3,width:20,height:20},
+			{position:{x:480,y:330},type:1,width:30,height:30},
 		],
 	},
 	/*{

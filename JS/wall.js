@@ -3,7 +3,7 @@ class wall extends physical{
 		super(layer,x,y,type,width,height)
 		this.collide=[entities.players]
         switch(this.type){
-            case 3:
+            case 3: case 4:
                 this.timers=[0]
             break
         }
@@ -26,6 +26,13 @@ class wall extends physical{
                 this.layer.strokeWeight(4)
                 regTriangle(this.layer,0,0,this.width/2,60)
             break
+            case 4:
+                this.layer.noFill()
+                this.layer.stroke(50,this.fade*min(1,max(1-this.timers[0]/15,-15+this.timers[0]/15)))
+                this.layer.strokeWeight(4)
+                regTriangle(this.layer,0,-10,this.width/2,60)
+                regTriangle(this.layer,0,10,this.width/2,60)
+            break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -43,11 +50,11 @@ class wall extends physical{
 		for(let a=0,la=this.collide.length;a<la;a++){
             for(let b=0,lb=this.collide[a].length;b<lb;b++){
                 if(boxInsideBox(this,this.collide[a][b])&&this.collide[a][b].timers[1]<=0&&!this.collide[a][b].dead&&
-                !(this.type==3&&this.timers[0]>0)){
+                !((this.type==3||this.type==4)&&this.timers[0]>0)){
                     switch(this.type){
                     }
                     if(!this.collide[a][b].dead){
-                        if(this.type==3){
+                        if(this.type==3||this.type==4){
                             this.collide[a][b].jumps++
                             if(this.timers[0]==0){
                                 this.timers[0]++
