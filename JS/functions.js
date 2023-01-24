@@ -140,7 +140,7 @@ function updateMouse(layer){
 	inputs.rel.y=(inputs.mouse.y-height/2)/stage.scale+layer.height/2
 }
 function resetWorld(){
-	entities.walls=[]
+	entities.walls=[[],[]]
 	entities.players=[]
 	entities.particles=[]
 }
@@ -150,7 +150,7 @@ function generateWorld(layer,level,key){
 	stage.focus.y=game.edge.y/2
 	entities.players.push(new player(layer,game.tileSize/2-game.tileSize*key+game.edge.x*key,level.player[key]))
 	for(let a=0,la=level.walls.length;a<la;a++){
-		entities.walls.push(new wall(layer,level.walls[a].position.x+level.walls[a].width/2,level.walls[a].position.y+level.walls[a].height/2,level.walls[a].type,level.walls[a].width,level.walls[a].height))
+		entities.walls[level.walls[a].level].push(new wall(layer,level.walls[a].position.x+level.walls[a].width/2,level.walls[a].position.y+level.walls[a].height/2,level.walls[a].type,level.walls[a].width,level.walls[a].height))
 	}
-	run={back:[],fore:[entities.walls,entities.players,entities.particles]}
+	run={back:[],fore:[entities.walls[1],entities.walls[0],entities.players,entities.particles]}
 }

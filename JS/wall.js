@@ -33,6 +33,18 @@ class wall extends physical{
                 regTriangle(this.layer,0,-10,this.width/2,60)
                 regTriangle(this.layer,0,10,this.width/2,60)
             break
+            case 5:
+                this.layer.fill(150,this.fade)
+                this.layer.rect(0,0,this.width,this.height)
+                for(let a=0,la=this.width/10;a<la;a++){
+                    this.layer.triangle(-this.width/2+a*10,-this.height/2,-this.width/2+10+a*10,-this.height/2,-this.width/2+5+a*10,-this.height/2-15)
+                    this.layer.triangle(-this.width/2+a*10,this.height/2,-this.width/2+10+a*10,this.height/2,-this.width/2+5+a*10,this.height/2+15)
+                }
+                for(let a=0,la=this.height/10;a<la;a++){
+                    this.layer.triangle(-this.width/2,-this.height/2+a*10,-this.width/2,-this.height/2+10+a*10,-this.width/2-15,-this.height/2+5+a*10)
+                    this.layer.triangle(this.width/2,-this.height/2+a*10,this.width/2,-this.height/2+10+a*10,this.width/2+15,-this.height/2+5+a*10)
+                }
+            break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -52,6 +64,9 @@ class wall extends physical{
                 if(boxInsideBox(this,this.collide[a][b])&&this.collide[a][b].timers[1]<=0&&!this.collide[a][b].dead&&
                 !((this.type==3||this.type==4)&&this.timers[0]>0)){
                     switch(this.type){
+                        case 5:
+                            this.collide[a][b].dead=true
+                        break
                     }
                     if(!this.collide[a][b].dead){
                         if(this.type==3||this.type==4){
