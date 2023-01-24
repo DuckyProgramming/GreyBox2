@@ -125,7 +125,7 @@ levels=[
 		],
 	},{
 		edge:{x:600,y:600},
-		player:[510,0],
+		player:[510,510],
 		walls:[
 			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
 			{position:{x:510,y:540},type:1,level:0,width:90,height:60},
@@ -136,7 +136,7 @@ levels=[
 		],
 	},{
 		edge:{x:750,y:600},
-		player:[510,0],
+		player:[510,510],
 		walls:[
 			{position:{x:0,y:540},type:1,level:0,width:750,height:60},
 			{position:{x:570,y:300},type:1,level:0,width:30,height:30},
@@ -146,9 +146,18 @@ levels=[
 			{position:{x:450,y:0},type:5,level:1,width:30,height:360},
 			{position:{x:600,y:180},type:5,level:1,width:30,height:360},
 		],
+	},{
+		edge:{x:450,y:900},
+		player:[810,210],
+		walls:[
+			{position:{x:0,y:840},type:1,level:0,width:90,height:60},
+			{position:{x:420,y:180},type:1,level:0,width:30,height:720},
+			{position:{x:390,y:120},type:1,level:0,width:60,height:60},
+			{position:{x:120,y:720},type:6,level:0,width:60,height:30},
+			{position:{x:240,y:240},type:8,level:0,width:60,height:30},
+		],
 	},
 	//double triangle
-	//moving platforms
 	/*{
 		edge:{x:0,y:600},
 		player:[0,0],

@@ -45,6 +45,46 @@ class wall extends physical{
                     this.layer.triangle(this.width/2,-this.height/2+a*10,this.width/2,-this.height/2+10+a*10,this.width/2+15,-this.height/2+5+a*10)
                 }
             break
+            case 6: case 8:
+                this.layer.fill(100,this.fade)
+                this.layer.rect(0,0,this.width,this.height)
+                this.layer.fill(50,this.fade)
+                this.layer.beginShape()
+                this.layer.vertex(-this.width/2,-this.height/2)
+                this.layer.vertex(-this.width/4,-this.height/2)
+                this.layer.vertex(this.width/2,this.height/4)
+                this.layer.vertex(this.width/2,this.height/2)
+                this.layer.vertex(this.width/4,this.height/2)
+                this.layer.vertex(-this.width/2,-this.height/4)
+                this.layer.endShape()
+                this.layer.stroke(40,this.fade)
+                this.layer.strokeWeight(3)
+                if(this.type==6){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x,this.base.position.y-this.position.y-240)
+                }else if(this.type==8){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x,this.base.position.y-this.position.y+240)
+                }
+            break
+            case 7: case 9:
+                this.layer.fill(100,this.fade)
+                this.layer.rect(0,0,this.width,this.height)
+                this.layer.fill(50,this.fade)
+                this.layer.beginShape()
+                this.layer.vertex(this.width/2,-this.height/2)
+                this.layer.vertex(this.width/4,-this.height/2)
+                this.layer.vertex(-this.width/2,this.height/4)
+                this.layer.vertex(-this.width/2,this.height/2)
+                this.layer.vertex(-this.width/4,this.height/2)
+                this.layer.vertex(this.width/2,-this.height/4)
+                this.layer.endShape()
+                this.layer.stroke(40,this.fade)
+                this.layer.strokeWeight(3)
+                if(this.type==7){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y-240,this.base.position.x-this.position.x,this.base.position.y-this.position.y)
+                }else if(this.type==9){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y+240,this.base.position.x-this.position.x,this.base.position.y-this.position.y)
+                }
+            break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -56,6 +96,34 @@ class wall extends physical{
                     if(this.timers[0]>=240){
                         this.timers[0]=0
                     }
+                }
+            break
+            case 6:
+                if(this.time%240<60){
+                    this.position.y-=4
+                }else if(this.time%240>=120&&this.time%240<180){
+                    this.position.y+=4
+                }
+            break
+            case 7:
+                if(this.time%240<60){
+                    this.position.x-=4
+                }else if(this.time%240>=120&&this.time%240<180){
+                    this.position.x+=4
+                }
+            break
+            case 8:
+                if(this.time%240<60){
+                    this.position.y+=4
+                }else if(this.time%240>=120&&this.time%240<180){
+                    this.position.y-=4
+                }
+            break
+            case 9:
+                if(this.time%240<60){
+                    this.position.x+=4
+                }else if(this.time%240>=120&&this.time%240<180){
+                    this.position.x-=4
                 }
             break
         }
