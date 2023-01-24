@@ -156,6 +156,15 @@ levels=[
 			{position:{x:120,y:720},type:6,level:0,width:60,height:30},
 			{position:{x:240,y:240},type:8,level:0,width:60,height:30},
 		],
+	},{
+		edge:{x:720,y:600},
+		player:[480,0],
+		walls:[
+			{position:{x:0,y:510},type:1,level:0,width:90,height:90},
+			{position:{x:450,y:480},type:7,level:0,width:60,height:30},
+			{position:{x:660,y:510},type:1,level:0,width:90,height:90},
+			{position:{x:390,y:300},type:5,level:0,width:30,height:300},
+		],
 	},
 	//double triangle
 	/*{

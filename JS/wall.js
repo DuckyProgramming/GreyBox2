@@ -80,9 +80,9 @@ class wall extends physical{
                 this.layer.stroke(40,this.fade)
                 this.layer.strokeWeight(3)
                 if(this.type==7){
-                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y-240,this.base.position.x-this.position.x,this.base.position.y-this.position.y)
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x-240,this.base.position.y-this.position.y)
                 }else if(this.type==9){
-                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y+240,this.base.position.x-this.position.x,this.base.position.y-this.position.y)
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x+240,this.base.position.y-this.position.y)
                 }
             break
 		}
