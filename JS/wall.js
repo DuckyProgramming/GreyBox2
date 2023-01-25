@@ -30,8 +30,8 @@ class wall extends physical{
                 this.layer.noFill()
                 this.layer.stroke(50,this.fade*min(1,max(1-this.timers[0]/15,-15+this.timers[0]/15)))
                 this.layer.strokeWeight(4)
-                regTriangle(this.layer,0,-10,this.width/2,60)
-                regTriangle(this.layer,0,10,this.width/2,60)
+                regTriangle(this.layer,0,-6,this.width/2,60)
+                regTriangle(this.layer,0,6,this.width/2,60)
             break
             case 5:
                 this.layer.fill(150,this.fade)
@@ -90,7 +90,7 @@ class wall extends physical{
 	}
 	update(){
         switch(this.type){
-            case 3:
+            case 3: case 4:
                 if(this.timers[0]>0){
                     this.timers[0]++
                     if(this.timers[0]>=240){
@@ -138,7 +138,7 @@ class wall extends physical{
                     }
                     if(!this.collide[a][b].dead){
                         if(this.type==3||this.type==4){
-                            this.collide[a][b].jumps++
+                            this.collide[a][b].jumps+=this.type-2
                             if(this.timers[0]==0){
                                 this.timers[0]++
                             }

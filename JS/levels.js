@@ -193,8 +193,27 @@ levels=[
 			{position:{x:1080,y:180},type:5,level:1,width:30,height:420},
 			{position:{x:1410,y:540},type:1,level:0,width:90,height:60},
 		],
+	},{
+		edge:{x:1050,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:60,height:60},
+			{position:{x:990,y:540},type:1,level:0,width:60,height:60},
+			{position:{x:545,y:420},type:4,level:0,width:20,height:30},
+		],
+	},{
+		edge:{x:900,y:600},
+		player:[480,0],
+		walls:[
+			{position:{x:0,y:510},type:1,level:0,width:120,height:90},
+			{position:{x:780,y:510},type:1,level:0,width:120,height:90},
+			{position:{x:300,y:0},type:5,level:0,width:30,height:360},
+			{position:{x:480,y:240},type:5,level:0,width:30,height:360},
+			{position:{x:660,y:0},type:5,level:0,width:30,height:360},
+			{position:{x:395,y:330},type:4,level:0,width:20,height:30},
+			{position:{x:575,y:330},type:4,level:0,width:20,height:30},
+		],
 	},
-	//double triangle
 	/*{
 		edge:{x:0,y:600},
 		player:[0,0],
