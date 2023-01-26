@@ -85,6 +85,29 @@ class wall extends physical{
                     this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x+240,this.base.position.y-this.position.y)
                 }
             break
+            case 10:
+                this.layer.fill(150,this.fade)
+                this.layer.rect(0,0,this.width,this.height)
+                for(let a=0,la=this.width/10;a<la;a++){
+                    this.layer.triangle(-this.width/2+a*10,-this.height/2,-this.width/2+10+a*10,-this.height/2,-this.width/2+5+a*10,-this.height/2-15)
+                    this.layer.triangle(-this.width/2+a*10,this.height/2,-this.width/2+10+a*10,this.height/2,-this.width/2+5+a*10,this.height/2+15)
+                }
+                for(let a=0,la=this.height/10;a<la;a++){
+                    this.layer.triangle(-this.width/2,-this.height/2+a*10,-this.width/2,-this.height/2+10+a*10,-this.width/2-15,-this.height/2+5+a*10)
+                    this.layer.triangle(this.width/2,-this.height/2+a*10,this.width/2,-this.height/2+10+a*10,this.width/2+15,-this.height/2+5+a*10)
+                }
+                this.layer.stroke(40,this.fade)
+                this.layer.strokeWeight(3)
+                if(this.type==10){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x,this.base.position.y-this.position.y-240)
+                }else if(this.type==12){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x,this.base.position.y-this.position.y+240)
+                }else if(this.type==11){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x-240,this.base.position.y-this.position.y)
+                }else if(this.type==13){
+                    this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x+240,this.base.position.y-this.position.y)
+                }
+            break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -123,6 +146,34 @@ class wall extends physical{
                 if(this.time%240<60){
                     this.position.x+=4
                 }else if(this.time%240>=120&&this.time%240<180){
+                    this.position.x-=4
+                }
+            break
+            case 10:
+                if(this.time%120<60){
+                    this.position.y-=4
+                }else{
+                    this.position.y+=4
+                }
+            break
+            case 11:
+                if(this.time%120<60){
+                    this.position.x-=4
+                }else{
+                    this.position.x+=4
+                }
+            break
+            case 12:
+                if(this.time%120<60){
+                    this.position.y+=4
+                }else{
+                    this.position.y-=4
+                }
+            break
+            case 13:
+                if(this.time%120<60){
+                    this.position.x+=4
+                }else{
                     this.position.x-=4
                 }
             break
