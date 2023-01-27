@@ -3,7 +3,7 @@ class wall extends physical{
 		super(layer,x,y,type,width,height)
 		this.collide=[entities.players]
         switch(this.type){
-            case 3: case 4: case 14:
+            case 3: case 4: case 14: case 16:
                 this.timers=[0]
             break
         }
@@ -117,9 +117,17 @@ class wall extends physical{
             case 15:
 				this.layer.fill(100,this.fade)
 				this.layer.rect(0,0,this.width,this.height)
-                this.layer.fill(80,this.fade)
-				this.layer.rect(0,0,this.width-8,this.height-8)
+                this.layer.fill(60,this.fade)
+				this.layer.rect(0,0,this.width-12,this.height-12)
 			break
+            case 16:
+                this.layer.noFill()
+                this.layer.stroke(150,this.fade*min(1,max(2-this.timers[0]/15,-15+this.timers[0]/15)))
+                this.layer.strokeWeight(3)
+                this.layer.rect(0,0,this.width-3,this.height-3)
+                this.layer.stroke(90,this.fade*min(1,max(2-this.timers[0]/15,-15+this.timers[0]/15)))
+                this.layer.rect(0,0,this.width-12,this.height-12)
+            break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -189,7 +197,7 @@ class wall extends physical{
                     this.position.x-=4
                 }
             break
-            case 14:
+            case 14: case 16:
                 if(this.timers[0]>0){
                     this.timers[0]++
                     if(this.timers[0]>=240){
@@ -201,12 +209,12 @@ class wall extends physical{
 		for(let a=0,la=this.collide.length;a<la;a++){
             for(let b=0,lb=this.collide[a].length;b<lb;b++){
                 if(boxInsideBox(this,this.collide[a][b])&&this.collide[a][b].timers[1]<=0&&!this.collide[a][b].dead&&
-                !((this.type==3||this.type==4)&&this.timers[0]>0)&&!(this.type==14&&this.timers[0]>30)){
+                !((this.type==3||this.type==4)&&this.timers[0]>0)&&!((this.type==14||this.type==16)&&this.timers[0]>30)){
                     switch(this.type){
                         case 5: case 10: case 11: case 12: case 13:
                             this.collide[a][b].dead=true
                         break
-                        case 14:
+                        case 14: case 16:
                             if(this.timers[0]==0){
                                 this.timers[0]++
                             }
@@ -228,7 +236,7 @@ class wall extends physical{
                                 this.collide[a][b].position.y=this.position.y-this.height/2-this.collide[a][b].height/2
                                 this.collide[a][b].velocity.y=0
                                 this.collide[a][b].velocity.x*=(1-physics.friction)
-                                if(this.type==15){
+                                if(this.type==15||this.type==16){
                                     this.collide[a][b].timers[0]=5
                                     this.collide[a][b].jumps=max(2,this.collide[a][b].jumps)
                                 }else if(this.type!=2){

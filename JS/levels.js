@@ -530,6 +530,17 @@ levels=[
 			{position:{x:795,y:180},type:14,level:0,width:30,height:30},
 			{position:{x:1395,y:480},type:14,level:0,width:30,height:30},
 		],
+	},{
+		edge:{x:600,y:1800},
+		player:[1710,210],
+		walls:[
+			{position:{x:0,y:1740},type:15,level:0,width:60,height:60},
+			{position:{x:540,y:240},type:1,level:0,width:60,height:60},
+			{position:{x:570,y:300},type:1,level:0,width:30,height:1500},
+			{position:{x:360,y:1350},type:16,level:0,width:30,height:30},
+			{position:{x:60,y:990},type:16,level:0,width:30,height:30},
+			{position:{x:240,y:570},type:16,level:0,width:30,height:30},
+		],
 	},
 	//15-hyperblock
 	/*{
