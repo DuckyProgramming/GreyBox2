@@ -197,7 +197,7 @@ class wall extends physical{
                 if(boxInsideBox(this,this.collide[a][b])&&this.collide[a][b].timers[1]<=0&&!this.collide[a][b].dead&&
                 !((this.type==3||this.type==4)&&this.timers[0]>0)&&!(this.type==14&&this.timers[0]>30)){
                     switch(this.type){
-                        case 5:
+                        case 5: case 10: case 11: case 12: case 13:
                             this.collide[a][b].dead=true
                         break
                         case 14:

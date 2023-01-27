@@ -456,6 +456,20 @@ levels=[
 			{position:{x:1265,y:360},type:4,level:0,width:20,height:30},
 			{position:{x:1200,y:240},type:5,level:0,width:30,height:360},
 		],
+	},{
+		edge:{x:900,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:810,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:360,y:0},type:5,level:0,width:30,height:150},
+			{position:{x:360,y:420},type:5,level:0,width:30,height:180},
+			{position:{x:360,y:150},type:12,level:0,width:30,height:30},
+			{position:{x:660,y:0},type:5,level:0,width:30,height:150},
+			{position:{x:660,y:420},type:5,level:0,width:30,height:180},
+			{position:{x:660,y:390},type:10,level:0,width:30,height:30},
+			{position:{x:515,y:360},type:4,level:0,width:20,height:30},
+		],
 	},
 	//moving spikes
 	/*{
