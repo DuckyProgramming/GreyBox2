@@ -396,6 +396,17 @@ levels=[
 			{position:{x:1170,y:180},type:5,level:1,width:30,height:420},
 			{position:{x:1200,y:300},type:1,level:0,width:30,height:30},
 		],
+	},{
+		edge:{x:300,y:1200},
+		player:[1110,150],
+		walls:[
+			{position:{x:0,y:1140},type:1,level:0,width:90,height:60},
+			{position:{x:240,y:180},type:1,level:0,width:60,height:60},
+			{position:{x:270,y:240},type:1,level:0,width:30,height:960},
+			{position:{x:120,y:900},type:14,level:0,width:30,height:30},
+			{position:{x:120,y:660},type:14,level:0,width:30,height:30},
+			{position:{x:120,y:420},type:14,level:0,width:30,height:30},
+		],
 	},
 	//they disappear now
 	/*{

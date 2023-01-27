@@ -3,7 +3,7 @@ class wall extends physical{
 		super(layer,x,y,type,width,height)
 		this.collide=[entities.players]
         switch(this.type){
-            case 3: case 4:
+            case 3: case 4: case 14:
                 this.timers=[0]
             break
         }
@@ -85,7 +85,7 @@ class wall extends physical{
                     this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x+240,this.base.position.y-this.position.y)
                 }
             break
-            case 10:
+            case 10: case 11: case 12: case 13:
                 this.layer.fill(150,this.fade)
                 this.layer.rect(0,0,this.width,this.height)
                 for(let a=0,la=this.width/10;a<la;a++){
@@ -107,6 +107,12 @@ class wall extends physical{
                 }else if(this.type==13){
                     this.layer.line(this.base.position.x-this.position.x,this.base.position.y-this.position.y,this.base.position.x-this.position.x+240,this.base.position.y-this.position.y)
                 }
+            break
+            case 14:
+                this.layer.noFill()
+                this.layer.stroke(150,this.fade*min(1,max(2-this.timers[0]/15,-15+this.timers[0]/15)))
+                this.layer.strokeWeight(6)
+                this.layer.rect(0,0,this.width-6,this.height-6)
             break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
@@ -177,14 +183,27 @@ class wall extends physical{
                     this.position.x-=4
                 }
             break
+            case 14:
+                if(this.timers[0]>0){
+                    this.timers[0]++
+                    if(this.timers[0]>=240){
+                        this.timers[0]=0
+                    }
+                }
+            break
         }
 		for(let a=0,la=this.collide.length;a<la;a++){
             for(let b=0,lb=this.collide[a].length;b<lb;b++){
                 if(boxInsideBox(this,this.collide[a][b])&&this.collide[a][b].timers[1]<=0&&!this.collide[a][b].dead&&
-                !((this.type==3||this.type==4)&&this.timers[0]>0)){
+                !((this.type==3||this.type==4)&&this.timers[0]>0)&&!(this.type==14&&this.timers[0]>30)){
                     switch(this.type){
                         case 5:
                             this.collide[a][b].dead=true
+                        break
+                        case 14:
+                            if(this.timers[0]==0){
+                                this.timers[0]++
+                            }
                         break
                     }
                     if(!this.collide[a][b].dead){
