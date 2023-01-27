@@ -541,8 +541,23 @@ levels=[
 			{position:{x:60,y:990},type:16,level:0,width:30,height:30},
 			{position:{x:240,y:570},type:16,level:0,width:30,height:30},
 		],
+	},{
+		edge:{x:1200,y:2400},
+		player:[2310,270],
+		walls:[
+			{position:{x:0,y:2340},type:15,level:0,width:90,height:60},
+			{position:{x:1140,y:300},type:1,level:0,width:60,height:60},
+			{position:{x:1170,y:360},type:1,level:0,width:30,height:2040},
+			{position:{x:480,y:2100},type:16,level:0,width:30,height:30},
+			{position:{x:1085,y:1805},type:3,level:0,width:20,height:20},
+			{position:{x:1020,y:1710},type:16,level:0,width:30,height:30},
+			{position:{x:600,y:1500},type:16,level:0,width:30,height:30},
+			{position:{x:240,y:1200},type:16,level:0,width:30,height:30},
+			{position:{x:305,y:840},type:4,level:0,width:20,height:30},
+			{position:{x:545,y:605},type:3,level:0,width:20,height:20},
+			{position:{x:720,y:540},type:16,level:0,width:30,height:30},
+		],
 	},
-	//15-hyperblock
 	/*{
 		edge:{x:0,y:600},
 		player:[0,0],
