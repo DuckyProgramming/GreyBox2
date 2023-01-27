@@ -337,6 +337,42 @@ levels=[
 			{position:{x:1145,y:365},type:3,level:0,width:20,height:20},
 			{position:{x:1710,y:540},type:1,level:0,width:90,height:60},
 		],
+	},{
+		edge:{x:2100,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:2010,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:300,y:150},type:1,level:0,width:30,height:450},
+			{position:{x:600,y:0},type:1,level:0,width:30,height:390},
+			{position:{x:900,y:150},type:1,level:0,width:30,height:450},
+			{position:{x:1200,y:0},type:1,level:0,width:30,height:390},
+			{position:{x:270,y:360},type:1,level:0,width:30,height:30},
+			{position:{x:330,y:360},type:1,level:0,width:30,height:30},
+			{position:{x:270,y:180},type:5,level:1,width:90,height:30},
+			{position:{x:870,y:360},type:1,level:0,width:30,height:30},
+			{position:{x:930,y:360},type:1,level:0,width:30,height:30},
+			{position:{x:870,y:180},type:5,level:1,width:90,height:30},
+			{position:{x:570,y:330},type:5,level:1,width:90,height:30},
+			{position:{x:600,y:540},type:1,level:0,width:30,height:60},
+			{position:{x:1170,y:330},type:5,level:1,width:90,height:30},
+			{position:{x:1200,y:540},type:1,level:0,width:30,height:60},
+			{position:{x:1655,y:365},type:3,level:0,width:20,height:20},
+		],
+	},{
+		edge:{x:2400,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:2310,y:540},type:1,level:0,width:90,height:60},
+		],
+	},{
+		edge:{x:2700,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:2610,y:540},type:1,level:0,width:90,height:60},
+		],
 	},
 	/*{
 		edge:{x:0,y:600},
