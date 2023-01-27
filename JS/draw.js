@@ -40,12 +40,50 @@ function draw(){
 					graphics.main.line(graphics.main.width/la/2+a*graphics.main.width/la,((a+3)*(a+2)*-10-game.time*25)%1000+800,graphics.main.width/la/2+a*graphics.main.width/la,((a+3)*(a+2)*-10-game.time*25)%1000+850)
 				}
 			}
+			graphics.main.fill(100)
+			graphics.main.textSize(20)
+			graphics.main.text(ceil(game.time/6)/10,graphics.main.width/2,40)
+			graphics.main.textSize(15)
+			for(let a=0,la=min(game.splits.length,20);a<la;a++){
+				graphics.main.text(game.splits[a],50,15+a*15)
+			}
+			for(let a=20,la=min(game.splits.length,40);a<la;a++){
+				graphics.main.text(game.splits[a],150,15+(a-20)*15)
+			}
+			if(game.maxZone<game.zone){
+				game.maxZone++
+				game.splits.push((game.zone)+": "+ceil(game.time/6)/10)
+			}
 			game.time++
 		break
 		case 'menu':
+			graphics.main.background(240)
+			graphics.main.fill(120)
+			graphics.main.textSize(90)
+			graphics.main.text("GreyBox",graphics.main.width/2,graphics.main.height/2-75)
+			graphics.main.textSize(30)
+			graphics.main.text("WASD or Arrow Keys to Move\n\nClick to Begin",graphics.main.width/2,graphics.main.height/2+60)
 		break
 		case 'end':
-			graphics.main.background(0,0,255)
+			graphics.main.background(0)
+			graphics.main.fill(255)
+			graphics.main.noStroke()
+			graphics.main.textSize(25)
+			graphics.main.text("Use this screen\nfor record proof",graphics.main.width/2,graphics.main.height/2)
+			graphics.main.fill(100)
+			graphics.main.textSize(20)
+			graphics.main.text(ceil(game.time/6)/10,graphics.main.width/2,40)
+			graphics.main.textSize(15)
+			for(let a=0,la=min(game.splits.length,20);a<la;a++){
+				graphics.main.text(game.splits[a],50,15+a*15)
+			}
+			for(let a=20,la=min(game.splits.length,40);a<la;a++){
+				graphics.main.text(game.splits[a],150,15+(a-20)*15)
+			}
+			if(game.maxZone<game.zone){
+				game.maxZone++
+				game.splits.push((game.zone)+": "+ceil(game.time/6)/10)
+			}
 		break
 	}
 	stage.scale=min(width/graphics.main.width,height/graphics.main.height)
