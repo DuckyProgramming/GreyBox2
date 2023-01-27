@@ -407,6 +407,30 @@ levels=[
 			{position:{x:120,y:660},type:14,level:0,width:30,height:30},
 			{position:{x:120,y:420},type:14,level:0,width:30,height:30},
 		],
+	},{
+		edge:{x:1500,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:1410,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:180,y:0},type:5,level:1,width:30,height:300},
+			{position:{x:180,y:300},type:5,level:1,width:120,height:30},
+			{position:{x:240,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:335,y:360},type:4,level:0,width:20,height:30},
+			{position:{x:990,y:0},type:5,level:1,width:30,height:300},
+			{position:{x:900,y:300},type:5,level:1,width:120,height:30},
+			{position:{x:930,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:845,y:360},type:4,level:0,width:20,height:30},
+			{position:{x:935,y:210},type:4,level:0,width:20,height:30},
+			{position:{x:935,y:185},type:3,level:0,width:20,height:20},
+		],
+	},{
+		edge:{x:1500,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:1410,y:540},type:1,level:0,width:90,height:60},
+		],
 	},
 	//they disappear now
 	/*{
