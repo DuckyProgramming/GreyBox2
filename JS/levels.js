@@ -470,8 +470,20 @@ levels=[
 			{position:{x:660,y:390},type:10,level:0,width:30,height:30},
 			{position:{x:515,y:360},type:4,level:0,width:20,height:30},
 		],
+	},{
+		edge:{x:900,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:810,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:570,y:450},type:10,level:0,width:30,height:30},
+			{position:{x:300,y:180},type:12,level:0,width:30,height:30},
+			{position:{x:300,y:450},type:13,level:0,width:30,height:30},
+			{position:{x:570,y:180},type:11,level:0,width:30,height:30},
+			{position:{x:440,y:320},type:3,level:0,width:20,height:20},
+		],
 	},
-	//moving spikes
+	//15-hyperblock
 	/*{
 		edge:{x:0,y:600},
 		player:[0,0],

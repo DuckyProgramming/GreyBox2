@@ -114,6 +114,12 @@ class wall extends physical{
                 this.layer.strokeWeight(6)
                 this.layer.rect(0,0,this.width-6,this.height-6)
             break
+            case 15:
+				this.layer.fill(100,this.fade)
+				this.layer.rect(0,0,this.width,this.height)
+                this.layer.fill(80,this.fade)
+				this.layer.rect(0,0,this.width-8,this.height-8)
+			break
 		}
 		this.layer.translate(-this.position.x,-this.position.y)
 	}
@@ -222,7 +228,10 @@ class wall extends physical{
                                 this.collide[a][b].position.y=this.position.y-this.height/2-this.collide[a][b].height/2
                                 this.collide[a][b].velocity.y=0
                                 this.collide[a][b].velocity.x*=(1-physics.friction)
-                                if(this.type!=2){
+                                if(this.type==15){
+                                    this.collide[a][b].timers[0]=5
+                                    this.collide[a][b].jumps=max(2,this.collide[a][b].jumps)
+                                }else if(this.type!=2){
                                     this.collide[a][b].timers[0]=5
                                     this.collide[a][b].jumps=max(1,this.collide[a][b].jumps)
                                 }
