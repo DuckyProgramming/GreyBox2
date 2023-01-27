@@ -39,6 +39,16 @@ class player extends partisan{
                 this.anim.direction+=0.1
             }
         }
+        if(game.zone==levels.length-1&&this.position.y>3000){
+            this.velocity.y+=physics.gravity*0.25
+        }
+        if(game.zone==levels.length-1&&this.position.y<2400){
+            this.velocity.y-=physics.gravity*0.25
+        }
+        if(this.position.y<=0&&game.zone==levels.length-1){
+            transition.trigger=true
+            transition.scene='end'
+        }
         if(this.position.x>=game.edge.x&&game.zone<levels.length-1){
             transition.trigger=true
             transition.zone=game.zone+1
