@@ -482,6 +482,30 @@ levels=[
 			{position:{x:570,y:180},type:11,level:0,width:30,height:30},
 			{position:{x:440,y:320},type:3,level:0,width:20,height:20},
 		],
+	},{
+		edge:{x:2400,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:2310,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:360,y:300},type:5,level:1,width:360,height:30},
+			{position:{x:960,y:300},type:5,level:1,width:360,height:30},
+			{position:{x:1560,y:300},type:5,level:1,width:360,height:30},
+			{position:{x:420,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:630,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:1620,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:1830,y:270},type:14,level:0,width:30,height:30},
+			{position:{x:1025,y:485},type:3,level:0,width:20,height:20},
+			{position:{x:1235,y:485},type:3,level:0,width:20,height:20},
+			{position:{x:1355,y:390},type:4,level:0,width:20,height:30},
+		],
+	},{
+		edge:{x:1200,y:600},
+		player:[510,510],
+		walls:[
+			{position:{x:0,y:540},type:1,level:0,width:90,height:60},
+			{position:{x:1110,y:540},type:1,level:0,width:90,height:60},
+		],
 	},
 	//15-hyperblock
 	/*{
