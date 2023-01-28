@@ -34,7 +34,7 @@ levels=[
 		],
 	},{
 		edge:{x:750,y:660},
-		player:[510,510],
+		player:[570,570],
 		walls:[
 			{position:{x:0,y:600},type:1,level:0,width:750,height:60},
 			{position:{x:360,y:0},type:1,level:0,width:30,height:480},
@@ -283,6 +283,7 @@ levels=[
 			{position:{x:240,y:750},type:2,level:0,width:30,height:30},
 			{position:{x:245,y:960},type:4,level:0,width:20,height:30},
 			{position:{x:245,y:720},type:4,level:0,width:20,height:30},
+			{position:{x:245,y:570},type:4,level:0,width:20,height:30},
 		],
 	},{
 		edge:{x:600,y:1200},
