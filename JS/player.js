@@ -49,11 +49,11 @@ class player extends partisan{
             transition.trigger=true
             transition.scene='end'
         }
-        if(this.position.x>=game.edge.x&&game.zone<levels.length-1){
+        if(this.position.x>=game.edge.x&&game.zone<levels.length-1&&!this.dead){
             transition.trigger=true
             transition.zone=game.zone+1
             transition.key=0
-        }else if(this.position.x<=0&&game.zone>0){
+        }else if(this.position.x<=0&&game.zone>0&&!this.dead){
             transition.trigger=true
             transition.zone=game.zone-1
             transition.key=1
