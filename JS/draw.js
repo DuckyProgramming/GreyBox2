@@ -40,6 +40,7 @@ function draw(){
 					graphics.main.line(graphics.main.width/la/2+a*graphics.main.width/la,((a+3)*(a+2)*-10-game.time*25)%1000+800,graphics.main.width/la/2+a*graphics.main.width/la,((a+3)*(a+2)*-10-game.time*25)%1000+850)
 				}
 			}
+			graphics.main.noStroke()
 			graphics.main.fill(100)
 			graphics.main.textSize(20)
 			graphics.main.text(ceil(game.time/6)/10,graphics.main.width/2,40)
@@ -58,6 +59,7 @@ function draw(){
 		break
 		case 'menu':
 			graphics.main.background(240)
+			graphics.main.noStroke()
 			graphics.main.fill(120)
 			graphics.main.textSize(90)
 			graphics.main.text("GreyBox",graphics.main.width/2,graphics.main.height/2-75)
@@ -66,6 +68,7 @@ function draw(){
 		break
 		case 'end':
 			graphics.main.background(0)
+			graphics.main.noStroke()
 			graphics.main.fill(255)
 			graphics.main.noStroke()
 			graphics.main.textSize(25)
